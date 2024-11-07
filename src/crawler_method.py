@@ -158,8 +158,8 @@ class setupDriver:
         
     def setup(self):
         """Sets up the WebDriver with the required options."""
-        chrome_driver_version = '130.0.6723.92'  # Specify desired version here
-        service = Service(ChromeDriverManager().install())
+        # chrome_driver_version = '130.0.6723.92'  # Specify desired version here
+        # service = Service(ChromeDriverManager().install())
         
         chrome_options = Options()
         chrome_options.add_argument("--disable-gpu")
@@ -169,5 +169,5 @@ class setupDriver:
         if self.headless == True:
             chrome_options.add_argument("--headless")
 
-        driver = webdriver.Chrome(service=service, options=chrome_options)
+        driver = webdriver.Chrome(options=chrome_options)
         return driver
