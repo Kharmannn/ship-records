@@ -169,5 +169,5 @@ class setupDriver:
         if self.headless == True:
             chrome_options.add_argument("--headless")
 
-        driver = webdriver.Chrome(options=chrome_options)
+        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
         return driver
