@@ -100,6 +100,7 @@ def process_vessel_data(helper, count, vessel_name_list, target_data, ship_type)
                 vessel_data['IMO Number'] = imo_number
 
                 # Save the vessel data to xlsx
+                print('Prepare to save to csv and excel...')
                 data_helper.appendToXlsx("vessel_data.xlsx", [vessel_data])
                 data_helper.appendNameToFile("vessel_name.txt", vessel_name)
 
