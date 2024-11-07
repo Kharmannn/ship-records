@@ -7,7 +7,7 @@ RUN apt-get update && \
     libglib2.0-0 libnss3 libx11-xcb1 libxcomposite1 libxrandr2 libxdamage1 \
     libxi6 libxtst6 libpangocairo-1.0-0 libatk1.0-0 libcups2 libdrm2 \
     libxss1 libgdk-pixbuf2.0-0 libxshmfence1 libgbm1 libasound2 \
-    fonts-liberation libappindicator3-1 xdg-utils libu2f-udev && \
+    fonts-liberation libappindicator3-1 xdg-utils libu2f-udev chromium-driver && \
     pip install pip --upgrade && \
     rm -rf /var/lib/apt/lists/*
 

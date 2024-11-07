@@ -165,9 +165,12 @@ class setupDriver:
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument('--window-size=1420,1080')
 
         if self.headless == True:
             chrome_options.add_argument("--headless")
 
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
+        driver = webdriver.Chrome(service=Service(executable_path='chromedriver-ubuntu-130/chromedriver'), options=chrome_options)
+        # driver = webdriver.Chrome(service=Service(executable_path=ChromeDriverManager().install()), options=chrome_options)
+        
         return driver
