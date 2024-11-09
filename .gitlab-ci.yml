@@ -2,7 +2,7 @@ stages:
   - build
   - deploy
 
-# Build Docker image
+# Build Docker image.
 build:
   stage: build
   script:
