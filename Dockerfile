@@ -37,4 +37,4 @@ COPY . /app
 WORKDIR /app
 
 # Run the Selenium script
-CMD ["python3", "/app/src/abs_crawler.py"]
+# CMD ["python3", "/app/src/abs_crawler.py"]
