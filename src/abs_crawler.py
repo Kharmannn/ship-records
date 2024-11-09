@@ -73,6 +73,7 @@ def process_vessel_data(helper, count, vessel_name_list, target_data, ship_type)
                     print(f"Vessel {vessel_name} already processed. Skipping...")
                     print(f"Total Vessel collected = {count - 1}, search for vessel number {count}")
                     count += 1
+                    target_data += 1
                     continue
 
                 # If new vessel, retrieve detailed information
@@ -125,7 +126,7 @@ if __name__ == "__main__":
     data_helper = dataHelper()
 
     vessel_name_list = data_helper.getNameFromFile('vessel_name.txt')
-    target_data_daily = 5
+    target_data_daily = 100
     count_vessel_data = len(vessel_name_list)
     total_target_data = count_vessel_data + target_data_daily
     print(vessel_name_list)
